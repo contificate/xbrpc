@@ -12,7 +12,7 @@ set(CMAKE_AUTOUIC_SEARCH_PATHS res/ui)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
+find_package(Qt5 COMPONENTS Widgets Network REQUIRED)
 
 add_executable(xbrpc
   # entry point
@@ -35,8 +35,11 @@ add_executable(xbrpc
   # mpack by ludocode
   src/mpack/mpack.c
   include/mpack/mpack.h
+
+  # rpc util
+  include/rpc/rpc.h
 )
 
 include_directories(include/)
 
-target_link_libraries(xbrpc PRIVATE Qt5::Widgets)
+target_link_libraries(xbrpc PRIVATE Qt5::Widgets Qt5::Network)

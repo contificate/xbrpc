@@ -5,6 +5,7 @@
 
 #include <QDebug>
 #include <QStandardItemModel>
+#include <QTcpSocket>
 #include <QWidget>
 
 namespace Ui {
@@ -17,7 +18,7 @@ class CallPane final : public QWidget {
   Q_OBJECT
 
  public:
-  explicit CallPane(QWidget *parent = {});
+  CallPane(QTcpSocket *socket, QWidget *parent = {});
   ~CallPane();
 
  private slots:
@@ -27,6 +28,7 @@ class CallPane final : public QWidget {
  private:
   Ui::CallPane *ui_;
   QStandardItemModel *model_;
+  QTcpSocket *socket_;
 };
 }  // namespace ui
 

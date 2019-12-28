@@ -4,11 +4,15 @@
 
 namespace ui {
 
-CallPane::CallPane(QWidget* parent)
+CallPane::CallPane(QTcpSocket* socket, QWidget* parent)
     : QWidget{parent},
       ui_{new Ui::CallPane},
-      model_{new QStandardItemModel{{}, 2}} {
+      model_{new QStandardItemModel{{}, 2}},
+      socket_{socket} {
+  socket_->setParent(this);
   ui_->setupUi(this);
+
+  // TODO: connect socket handlers
 
   // enable model and delegate
   ui_->argTable->setModel(model_);

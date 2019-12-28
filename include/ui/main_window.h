@@ -1,11 +1,14 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <rpc/rpc.h>
 #include <ui/call_pane.h>
 
 #include <QDebug>
-#include <QMainWindow>
 #include <QInputDialog>
+#include <QMainWindow>
+#include <QMessageBox>
+#include <QTcpSocket>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,9 +27,11 @@ class MainWindow final : public QMainWindow {
 
  private slots:
   void on_ConnectToConsole_triggered();
+  void CreateConsolePane();
 
  private:
   Ui::MainWindow *ui_;
+  QTcpSocket *socket_;
 };
 
 }  // namespace ui

@@ -1,4 +1,5 @@
 #include <ui/main_window.h>
+
 #include "./ui_main_window.h"
 
 namespace ui {
@@ -11,7 +12,12 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 void ui::MainWindow::on_ConnectToConsole_triggered() {
-    // TODO: display some kind of window to input IP address and connect
+  // TODO: display some kind of window to input IP address and connect
+  const auto kIP =
+      QInputDialog::getText(this, "Enter Console Address", "Enter console IP:");
+
+  // TODO: connect to console, create new tab on signal, transfer socket
+  // ownership
 }
 
 MainWindow::~MainWindow() { delete ui_; }

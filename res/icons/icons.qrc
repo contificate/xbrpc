@@ -4,5 +4,6 @@
         <file>remove.png</file>
         <file>add.png</file>
         <file>call.png</file>
+        <file>connect.png</file>
     </qresource>
 </RCC>

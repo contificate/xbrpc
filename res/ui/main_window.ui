@@ -43,11 +43,20 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="ConnectToConsole">
+   <property name="icon">
+    <iconset resource="../icons/icons.qrc">
+     <normaloff>:/connect.png</normaloff>:/connect.png</iconset>
+   </property>
    <property name="text">
     <string>Connect to console</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="../icons/icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

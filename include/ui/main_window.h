@@ -5,6 +5,7 @@
 
 #include <QDebug>
 #include <QMainWindow>
+#include <QInputDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

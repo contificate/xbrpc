@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>xbox.png</file>
+        <file>remove.png</file>
+        <file>add.png</file>
+        <file>call.png</file>
+    </qresource>
+</RCC>

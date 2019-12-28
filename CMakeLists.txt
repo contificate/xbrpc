@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(xbrpc LANGUAGES CXX)
+project(xbrpc)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -38,6 +38,10 @@ add_executable(xbrpc
 
   # rpc util
   include/rpc/rpc.h
+
+  # packer
+  src/mpack/arg_packer.cc
+  include/mpack/arg_packer.h
 )
 
 include_directories(include/)

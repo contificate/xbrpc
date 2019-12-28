@@ -24,12 +24,18 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="addrEdit">
        <property name="maximumSize">
         <size>
          <width>140</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="maxLength">
+        <number>10</number>
+       </property>
+       <property name="placeholderText">
+        <string>0xdead10cc</string>
        </property>
       </widget>
      </item>
@@ -116,7 +122,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="callBtn">
        <property name="text">
         <string> Call</string>
        </property>

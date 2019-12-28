@@ -14,6 +14,8 @@ void MainWindow::on_ConnectToConsole_triggered() {
   const auto kIP =
       QInputDialog::getText(this, "Enter Console Address", "Enter console IP:");
 
+  if (kIP.isEmpty()) return;
+
   // create socket and bind connected handler
   socket_ = new QTcpSocket{this};
   connect(socket_, &QTcpSocket::connected, this,
